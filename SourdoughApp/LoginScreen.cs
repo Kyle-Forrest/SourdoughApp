@@ -1,37 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace SourdoughApp
-{   
-    internal class Login
+{
+    public partial class LoginScreen : Form
     {
-        private Form1 _mainForm;
-
-        public Login(Form1 form)
+        public LoginScreen()
         {
-            _mainForm = form;
+            InitializeComponent();
         }
 
-        public string userName { get; set; }
-        public string password { get; set; }
+        public string usernameInput => txtUsername.Text;
+        public string passwordInput => txtPassword.Text;
 
-        string[,] userCredentials = new string[,]
+        private void Form1_Load(object sender, EventArgs e)
         {
-            { "admin", "Pass123"},
-            { "Joe", "Angie"},
-            { "Angie", "Joe"}
-        };
 
+        }
 
-
-        public bool Login(string userName, string password)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool result = false;
+            Login login = new Login(this);
 
-
-
-            return result;
+            login.CheckUserCredentials(usernameInput, passwordInput);
         }
     }
 }
