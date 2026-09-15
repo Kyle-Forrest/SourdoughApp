@@ -26,19 +26,19 @@ namespace SourdoughApp.LoginRegister
             username = userName;
             password = passWord;
 
-            for (int i = 0; i < userCredentials.GetLength(0); i++)
+            for (int i = 0; i < UserData.users.Count(); i++)
             {
                 //username = userCredentials[i, 0]
                 //password = userCredentials[i, 1]
 
-                if (userCredentials[i, 0] == userName && userCredentials[i, 1] == password)
+                if (UserData.users[i].Username == userName && UserData.users[i].Password == password)
                 {
                     result = true;
                     MessageBox.Show("Succesfully logged in.");
                     break;
                 }
 
-                if (i == userCredentials.GetLength(0) - 1)
+                if (i == UserData.users.Count() - 1)
                     {
                     MessageBox.Show("Username or password invalid.");
                     }

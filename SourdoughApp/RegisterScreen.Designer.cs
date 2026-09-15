@@ -36,6 +36,7 @@
             txtUsernameIn = new TextBox();
             label4 = new Label();
             btnCreateAccount = new Button();
+            btnExit = new Button();
             SuspendLayout();
             // 
             // label1
@@ -109,12 +110,23 @@
             btnCreateAccount.UseVisualStyleBackColor = true;
             btnCreateAccount.Click += btnCreateAccount_Click;
             // 
+            // btnExit
+            // 
+            btnExit.Location = new Point(12, 295);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(75, 23);
+            btnExit.TabIndex = 12;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
             // RegisterScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(406, 330);
+            Controls.Add(btnExit);
             Controls.Add(btnCreateAccount);
             Controls.Add(txtUsernameIn);
             Controls.Add(label4);
@@ -139,5 +151,6 @@
         public TextBox txtUsernameIn;
         private Label label4;
         private Button btnCreateAccount;
+        private Button btnExit;
     }
 }

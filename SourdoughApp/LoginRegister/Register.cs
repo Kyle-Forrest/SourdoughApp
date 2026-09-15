@@ -17,9 +17,18 @@ namespace SourdoughApp.LoginRegister
             public string passWord { get; set; }
             public string passCheck { get; set; }
 
-            public void RegisterAccount(string username, string password, string passcheck)
+            public bool RegisterAccount(string username, string password, string passcheck)
             {
-                
+                bool registered = false;
+
+                if (passWord == passCheck && !(UserData.users.Any(user => user.Username == username)))
+                {
+                    UserData.users.Add(new User { Username = username, Password = password });
+                    MessageBox.Show("Account registered successfully");
+                    registered = true;
+                }
+
+                return registered;
             }
     }
 }
