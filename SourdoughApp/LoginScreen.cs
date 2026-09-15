@@ -1,3 +1,5 @@
+using SourdoughApp.LoginRegister;
+
 namespace SourdoughApp
 {
     public partial class LoginScreen : Form
@@ -20,6 +22,14 @@ namespace SourdoughApp
             Login login = new Login(this);
 
             login.CheckUserCredentials(usernameInput, passwordInput);
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            RegisterScreen registerScreen = new RegisterScreen();
+
+            this.Hide();
+            registerScreen.Show();
         }
     }
 }

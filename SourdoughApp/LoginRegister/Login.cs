@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SourdoughApp
+namespace SourdoughApp.LoginRegister
 {   
     internal class Login
     {
