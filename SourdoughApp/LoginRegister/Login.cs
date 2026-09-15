@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -16,13 +17,6 @@ namespace SourdoughApp.LoginRegister
         public string username { get; set; }
         public string password { get; set; }
         public bool isLoggedIn { get; set; }
-
-        string[,] userCredentials = new string[,]
-        {
-            { "admin", "Pass123"},
-            { "Joe", "Angie"},
-            { "Angie", "Joe"}
-        };
 
 
 
