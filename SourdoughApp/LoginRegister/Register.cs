@@ -30,9 +30,9 @@ namespace SourdoughApp.LoginRegister
                     bool registered = false;
 
 
-                    if (passWord == passCheck && !(UserData.users.Any(user => user.Username == username)))
+                    if (passWord == passCheck && !(db.Users.Any(user => user.Username == username)))
                     {
-                        db.Users.Add(new User { Username = username, Password = passWord });
+                        db.Users.Add(newUser);
                         db.SaveChanges();
                         MessageBox.Show("Account registered successfully");
                         registered = true;
