@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SourdoughApp
 {
-    public class MyDbContext : DbContext
+    public class SourdoughDbContext : DbContext
     {
         public DbSet<User> Users { get; set; }
 
@@ -18,6 +18,7 @@ namespace SourdoughApp
     
     public class User
     {
+        public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
     }
