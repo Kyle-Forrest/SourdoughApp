@@ -17,14 +17,14 @@ namespace SourdoughApp.LoginRegister
             public string passWord { get; set; }
             public string passCheck { get; set; }
 
-            public bool RegisterAccount(string username, string password, string passcheck)
+            public bool RegisterAccount(string username, string passWord, string passCheck)
             {
                 using (SourdoughDbContext db = new SourdoughDbContext())
                 {
                     User newUser = new User
                     {
                         Username = username,
-                        Password = password
+                        Password = passWord
                     };
 
                     bool registered = false;
@@ -32,7 +32,7 @@ namespace SourdoughApp.LoginRegister
 
                     if (passWord == passCheck && !(UserData.users.Any(user => user.Username == username)))
                     {
-                        db.Users.Add(new User { Username = username, Password = password });
+                        db.Users.Add(new User { Username = username, Password = passWord });
                         db.SaveChanges();
                         MessageBox.Show("Account registered successfully");
                         registered = true;
