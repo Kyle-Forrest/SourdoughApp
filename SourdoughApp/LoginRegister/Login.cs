@@ -28,7 +28,7 @@ namespace SourdoughApp.LoginRegister
                 username = userName;
                 password = passWord;
 
-                User user = db.Users.FirstOrDefault(user => user.Username == userName && user.Password == passWord;
+                User? user = db.Users.FirstOrDefault(user => user.Username == userName && user.Password == passWord);
 
                     if (user != null)
                     {
