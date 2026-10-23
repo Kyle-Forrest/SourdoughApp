@@ -26,9 +26,6 @@ namespace SourdoughApp.LoginRegister
                         Username = username,
                         Password = password
                     };
-                    db.Users.Add(newUser);
-                    db.SaveChanges();
-
 
                     bool registered = false;
 
