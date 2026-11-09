@@ -22,6 +22,13 @@ namespace SourdoughApp
             Login login = new Login(this);
 
             login.CheckUserCredentials(usernameInput, passwordInput);
+
+            if (login.isLoggedIn)
+            {
+                HomePage homePage = new HomePage();
+                this.Hide();
+                homePage.Show();
+            }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)

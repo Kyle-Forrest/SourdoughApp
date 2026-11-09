@@ -29,7 +29,6 @@ namespace SourdoughApp.LoginRegister
 
                     bool registered = false;
 
-
                     if (passWord == passCheck && !(db.Users.Any(user => user.Username == username)))
                     {
                         db.Users.Add(newUser);
