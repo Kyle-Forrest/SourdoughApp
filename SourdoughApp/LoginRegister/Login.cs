@@ -33,9 +33,7 @@ namespace SourdoughApp.LoginRegister
                     if (user != null)
                     {
                         result = true;
-                        MessageBox.Show("Succesfully logged in.");
-                        _loginForm.Hide();
-                       
+                        MessageBox.Show("Succesfully logged in.");                       
                     }
 
                     else

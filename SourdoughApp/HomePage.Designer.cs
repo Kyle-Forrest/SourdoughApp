@@ -28,7 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            btnExit = new Button();
             SuspendLayout();
+            // 
+            // btnExit
+            // 
+            btnExit.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnExit.AutoSize = true;
+            btnExit.BackColor = Color.Red;
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnExit.ForeColor = SystemColors.ButtonFace;
+            btnExit.Location = new Point(754, 418);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(43, 29);
+            btnExit.TabIndex = 0;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
             // HomePage
             // 
@@ -36,11 +53,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnExit);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "HomePage";
             Text = "HomePage";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btnExit;
     }
 }
